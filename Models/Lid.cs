@@ -1,7 +1,8 @@
 namespace Leden.API.Models;
 
-public class Lid 
-{
+public class Lid {
+    [BsonId]
+    [BsonRepresentation(BsonType.ObjectId)]
     public Guid LidId { get; set; }
     public string? Naam { get; set; }
     public string? Voornaam { get; set; }

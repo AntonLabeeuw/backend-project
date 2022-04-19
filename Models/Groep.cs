@@ -1,6 +1,8 @@
 namespace Leden.API.Models;
 
 public class Groep {
+    [BsonId]
+    [BsonRepresentation(BsonType.ObjectId)]
     public Guid GroepId { get; set; }
     public string? GroepNaam { get; set; }
     public string? Site { get; set; }
