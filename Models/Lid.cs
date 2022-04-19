@@ -6,8 +6,8 @@ public class Lid {
     public Guid LidId { get; set; }
     public string? Naam { get; set; }
     public string? Voornaam { get; set; }
-    public Guid TakId { get; set; }
-    public Guid GroepId { get; set; }
+    public Tak? Tak { get; set; }
+    public Groep? Groep { get; set; }
     public string? Adres1 { get; set; }
     public string? Adres2 { get; set; }
     public string? Email { get; set; }
