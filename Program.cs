@@ -3,6 +3,11 @@ var mongoSettings = builder.Configuration.GetSection("MongoConnection");
 builder.Services.Configure<DatabaseSettings>(mongoSettings);
 builder.Services.AddTransient<IMongoContext, MongoContext>();
 
+builder.Services.AddTransient<ILidRepository, LidRepository>();
+builder.Services.AddTransient<ITakRepository, TakRepository>();
+builder.Services.AddTransient<IGroepRepository, GroepRepository>();
+builder.Services.AddTransient<ILidService, LidService>();
+
 var app = builder.Build();
 
 app.MapGet("/", () => "Hello World!");
