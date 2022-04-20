@@ -12,4 +12,4 @@ var app = builder.Build();
 
 app.MapGet("/", () => "Hello World!");
 
-app.Run("http://localhost:3000");
+app.Run("http://0.0.0.0:3000");
